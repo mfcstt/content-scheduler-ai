@@ -8,6 +8,9 @@ import {
 export default [
   layout("layouts/layout.tsx", [
     index("routes/dashboard.tsx"),
-    route("contents", "routes/contents.tsx")
+    route("contents", "routes/contents.tsx"),
+    route("content/new", "routes/content-new.tsx"),
+    route("content/edit/:id", "routes/content-edit.tsx"),
+
   ]),
 ] satisfies RouteConfig;
