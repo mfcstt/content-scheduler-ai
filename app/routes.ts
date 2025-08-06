@@ -11,6 +11,7 @@ export default [
     route("contents", "routes/contents.tsx"),
     route("content/new", "routes/content-new.tsx"),
     route("content/edit/:id", "routes/content-edit.tsx"),
+    route("users", "routes/users.tsx"),
 
   ]),
 ] satisfies RouteConfig;
