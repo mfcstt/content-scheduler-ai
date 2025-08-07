@@ -1,5 +1,7 @@
 import { PrismaClient } from "../app/generated/prisma/client.js";
 import { PrismaLibSQL } from '@prisma/adapter-libsql'
+import 'dotenv/config'
+
 
 const globalForPrisma = global as unknown as { 
     prisma: PrismaClient

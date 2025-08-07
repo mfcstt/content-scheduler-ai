@@ -11,14 +11,14 @@ import prisma from "prisma/prisma";
 
 export async function loader() {
   return {
-    contents: await prisma.content.findMany(),
+    posts: await prisma.content.findMany(),
   };
 }
 
 export default function ({ loaderData }: Route.ComponentProps) {
-  const contents =
-    loaderData && "contents" in loaderData
-      ? (loaderData as { contents: any[] }).contents
+  const posts =
+    loaderData && "posts" in loaderData
+      ? (loaderData as { posts: any[] }).posts
       : [];
   return (
     <div className="p-6">
@@ -30,7 +30,7 @@ export default function ({ loaderData }: Route.ComponentProps) {
           </TableRow>
         </TableHeader>
         <TableBody>
-          {contents.map((content: any) => (
+          {posts.map((content: any) => (
             <TableRow key={content.id}>
               <TableCell>{content.title}</TableCell>
               <TableCell>{content.description}</TableCell>

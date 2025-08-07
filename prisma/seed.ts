@@ -31,7 +31,7 @@ async function main() {
     });
   }
 
-  // Create 20 contents
+  // Create 20 posts
   for (let i = 0; i < 20; i++) {
     await prisma.content.create({
       data: {

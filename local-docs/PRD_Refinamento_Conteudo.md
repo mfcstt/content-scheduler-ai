@@ -46,7 +46,6 @@ O sistema envia o input do criador para a **OpenAI**, incluindo instruções sob
 
 ### Exemplo de Prompt:
 
-
 ---
 
 ## 📤 Saída JSON Esperada
@@ -72,6 +71,7 @@ O sistema envia o input do criador para a **OpenAI**, incluindo instruções sob
 ---
 
 ## 💬 Histórico de Conversas
+
 - Todas as conversas com o planner serão salvas na tabela chats.
 - Criadores podem revisar e ajustar planos anteriores.
 - Cada conversa é associada a um plano e registrada com data/hora.
@@ -82,31 +82,31 @@ O sistema envia o input do criador para a **OpenAI**, incluindo instruções sob
 
 ### Tabelas
 
+#### `posts`
 
-#### `contents`
-
-| Campo                 | Tipo     | Descrição                                     |
-| --------------------- | -------- | --------------------------------------------- |
-| id                    | string   | UUID do plano                                 |
-| title                 | string   | Título do conteúdo                            |
-| description           | string   | Descrição detalhada da ideia                  |
-| type                  | string   | Tipo de post (carrossel, reels, etc)          |
-| copy_ideas            | string   | Ideias de copy para usar                      |
-| hashtags              | string   | Hashtags sugeridas                            |
-| call_to_action        | string   | CTA do post                                   |
-| image_suggestions     | string   | Ideias visuais                                |
-| content               | string   | Plano completo em formato markdown            |
-| chat_history          | json     | Histórico da conversa de planejamento         |
-| created_at            | datetime | Data de criação                               |
-| updated_at            | datetime | Última atualização                            |
+| Campo             | Tipo     | Descrição                             |
+| ----------------- | -------- | ------------------------------------- |
+| id                | string   | UUID do plano                         |
+| title             | string   | Título do conteúdo                    |
+| description       | string   | Descrição detalhada da ideia          |
+| type              | string   | Tipo de post (carrossel, reels, etc)  |
+| copy_ideas        | string   | Ideias de copy para usar              |
+| hashtags          | string   | Hashtags sugeridas                    |
+| call_to_action    | string   | CTA do post                           |
+| image_suggestions | string   | Ideias visuais                        |
+| content           | string   | Plano completo em formato markdown    |
+| chat_history      | json     | Histórico da conversa de planejamento |
+| created_at        | datetime | Data de criação                       |
+| updated_at        | datetime | Última atualização                    |
 
 #### `embeddings`
-| Campo      | Tipo     | Descrição                                   |
-| ---------- | -------- | ------------------------------------------- |
-| id         | string   | UUID do embedding                           |
-| plan_id    | string   | Chave estrangeira para `plans`              |
-| vector     | vector   | Vetor para busca semântica                  |
-| created_at | datetime | Data de criação                             |
+
+| Campo      | Tipo     | Descrição                      |
+| ---------- | -------- | ------------------------------ |
+| id         | string   | UUID do embedding              |
+| plan_id    | string   | Chave estrangeira para `plans` |
+| vector     | vector   | Vetor para busca semântica     |
+| created_at | datetime | Data de criação                |
 
 ## 🧠 Funcionalidade Vetorial com IA (Futuro)
 
@@ -136,11 +136,11 @@ O sistema envia o input do criador para a **OpenAI**, incluindo instruções sob
 
 ## 📅 Roteiro Proposto
 
-| Fase          | Entregas Principais                                           |
-| ------------- | ------------------------------------------------------------- |
-| MVP           | Entrada da ideia, integração com OpenAI, JSON, persistência   |
-| Iterações     | Histórico de conversa, refinamentos, UI aprimorada            |
-| Fase Vetorial | Embeddings vetoriais, chatbot com busca semântica             |
+| Fase          | Entregas Principais                                         |
+| ------------- | ----------------------------------------------------------- |
+| MVP           | Entrada da ideia, integração com OpenAI, JSON, persistência |
+| Iterações     | Histórico de conversa, refinamentos, UI aprimorada          |
+| Fase Vetorial | Embeddings vetoriais, chatbot com busca semântica           |
 
 ---
 

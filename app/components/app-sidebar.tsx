@@ -1,25 +1,11 @@
 import * as React from "react"
 import {
-  IconCamera,
-  IconChartBar,
-  IconDashboard,
-  IconDatabase,
-  IconFileAi,
-  IconFileDescription,
-  IconFileWord,
-  IconFolder,
-  IconHelp,
-  IconInnerShadowTop,
-  IconListDetails,
-  IconReport,
-  IconSearch,
-  IconSettings,
-  IconUsers,
+  IconCamera, IconDashboard, IconFileAi,
+  IconFileDescription, IconInnerShadowTop,
+  IconListDetails
 } from "@tabler/icons-react"
 
-import { NavDocuments } from "~/components/nav-documents"
 import { NavMain } from "~/components/nav-main"
-import { NavSecondary } from "~/components/nav-secondary"
 import { NavUser } from "~/components/nav-user"
 import {
   Sidebar,
@@ -36,7 +22,6 @@ const data = {
   user: {
     name: "shadcn",
     email: "m@example.com",
-    avatar: "/avatars/shadcn.jpg",
   },
   navMain: [
     {
@@ -45,8 +30,8 @@ const data = {
       icon: IconDashboard,
     },
     {
-      title: "Contents",
-      url: "/contents",
+      title: "Posts",
+      url: "/posts",
       icon: IconListDetails,
     },
     {
@@ -129,9 +114,6 @@ export function AppSidebar({ ...props }: React.ComponentProps<typeof Sidebar>) {
       <SidebarContent>
         <NavMain items={data.navMain} />
       </SidebarContent>
-      <SidebarFooter>
-        <NavUser user={data.user} />
-      </SidebarFooter>
     </Sidebar>
   )
 }

@@ -1,6 +1,6 @@
 import { ChatInterface } from "~/components/chat-interface";
 
-export function ContentsChatbot() {
+export function PostsChatbot() {
   return (
     <div >
       <ChatInterface />
